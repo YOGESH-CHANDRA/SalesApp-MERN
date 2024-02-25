@@ -1,7 +1,6 @@
 {
   "name": "assignment4",
   "version": "0.1.0",
-  "proxy":"https://salesapp-mern.onrender.com",
   "private": true,
   "dependencies": {
     "@coreui/react": "^4.11.1",

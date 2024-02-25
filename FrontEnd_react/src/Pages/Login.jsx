@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSalesRecord } from "../SalesContext";
 import { toast } from "react-toastify";
 import Spinner from "../component/Spinner";
+import URL from "../Constant.js";
 
 // login form component
 const Login = () => {
@@ -24,7 +25,7 @@ const Login = () => {
 setLoading(true);
     const loginUser = async () => {
       try {
-        const res = await fetch("/user/signin", {
+        const res = await fetch(`${URL}/user/signin`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

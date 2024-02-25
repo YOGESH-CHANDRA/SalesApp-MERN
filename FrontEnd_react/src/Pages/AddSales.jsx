@@ -2,6 +2,7 @@ import { toast } from "react-toastify";
 import { useSalesRecord } from "../SalesContext";
 import Spinner from "../component/Spinner";
 import { useState } from "react";
+import URL from "../Constant.js";
 // Add sales form component
 const AddSales = () => {
   const { salesItem, setSalesItem, setSalesData } = useSalesRecord();
@@ -25,7 +26,7 @@ const AddSales = () => {
 
     try {
       setLoading(true);
-      const res = await fetch("/api/v1/salesData", {
+      const res = await fetch(`${URL}/api/v1/salesData`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

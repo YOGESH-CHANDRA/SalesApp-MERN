@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import Spinner from "../component/Spinner";
 import { toast } from "react-toastify";
+import URL from "../Constant.js";
 
 // total revenue component
 const TotalRevenue = () => {
@@ -11,7 +12,7 @@ const TotalRevenue = () => {
   const totalRevenue=async()=>{
   try {
     setLoading(true);
-    const resp = await fetch("/api/v1/salesData/totalRevenue", {
+    const resp = await fetch(`${URL}/api/v1/salesData/totalRevenue`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwtSAtoken"),
       }

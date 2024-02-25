@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Spinner from "../component/Spinner";
 import { toast } from "react-toastify";
+import URL from "../Constant.js";
 
 const Top5sales = () => {
   const [top5sales, setTop5sales] = useState([]);
@@ -8,7 +9,7 @@ const Top5sales = () => {
   const top5salesData = async () => {
     try {
       setLoading(true);
-      const resp = await fetch("/api/v1/salesData/top5sales", {
+      const resp = await fetch(`${URL}/api/v1/salesData/top5sales`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("jwtSAtoken")}`,
         },
