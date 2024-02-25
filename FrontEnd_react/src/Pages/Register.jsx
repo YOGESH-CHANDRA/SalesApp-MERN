@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Spinner from "../component/Spinner";
+import URL from "../Constant.js";
 
 // registration form
 const Register = () => {
@@ -37,7 +38,7 @@ const Register = () => {
         try {
           setLoading(true);
           console.log(registerUser);
-          const res = await fetch("/user/register", {
+          const res = await fetch(`${URL}/user/register`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

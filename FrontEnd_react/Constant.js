@@ -1,1 +1,0 @@
-export default URL= "https://salesapp-mern.onrender.com";
